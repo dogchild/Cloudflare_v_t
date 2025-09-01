@@ -1,7 +1,7 @@
 //nat64自动填充proxyip，无需且不支持proxyip设置
 import { connect } from "cloudflare:sockets";
 const WS_READY_STATE_OPEN = 1;
-let userID = "86c50e3a-5b87-49dd-bd20-03c7f2735e40";
+let userID = "063d0e8c-1806-4e15-8564-513aea4193b6";
 const cn_hostnames = [''];
 let CDNIP = '\u0077\u0077\u0077\u002e\u0076\u0069\u0073\u0061\u002e\u0063\u006f\u006d\u002e\u0073\u0067'
 // http_ip
@@ -260,7 +260,7 @@ async function handle\u0076\u006c\u0065\u0073\u0073WebSocket(request) {
           }
           return num.toString(16).padStart(2, '0');
         });
-        const prefixes = ['2602:fc59:b0:64::']; //2001:67c:2960:6464::
+        const prefixes = ['2602:fc59:b0:64::'];
         const chosenPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
         return `[${chosenPrefix}${hex[0]}${hex[1]}:${hex[2]}${hex[3]}]`;
       }
